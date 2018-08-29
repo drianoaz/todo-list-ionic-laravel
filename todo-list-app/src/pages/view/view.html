@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>View details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2>#{{ todo.id }}{{ todo.title }}</h2>
+  <p>{{ todo.description }}</p>
+  <p>Criado em {{ todo.created_at }}</p>
+
+  <button ion-button block color="danger" (click)="delete()">Remove</button>
+
+</ion-content>

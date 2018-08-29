@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form (ngSubmit)="add()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Todo</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.title" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input [(ngModel)]="todo.description" name="description"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button type="submit" block>Add Todo</button>
+  </form>
+
+</ion-content>

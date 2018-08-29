@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Todo-list app
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="add()" ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item no-padding *ngFor="let item of todoList" (click)="view(item)">
+      {{ item.title }}
+      <button ion-button icon-only clear item-end>
+        <ion-icon name="eye"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
